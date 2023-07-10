@@ -967,7 +967,6 @@ MakefileGenerator::writePrlFile(QTextStream &t)
     QString bdir = Option::output_dir;
     if(bdir.isEmpty())
         bdir = qmake_getpwd();
-    t << "QMAKE_PRL_BUILD_DIR = " << bdir << endl;
 
     if(!project->projectFile().isEmpty() && project->projectFile() != "-")
         t << "QMAKE_PRO_INPUT = " << project->projectFile().section('/', -1) << endl;
